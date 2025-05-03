@@ -7,9 +7,9 @@ import os
 app = FastAPI()
 
 # Load model and assets
-model_path = os.path.join(os.path.dirname(_file_), "model", "meal_recommender_rf.pkl")
-encoders_path = os.path.join(os.path.dirname(_file_), "model", "label_encoders.pkl")
-meal_ideas_path = os.path.join(os.path.dirname(_file_), "model", "meal_ideas.json")
+model_path = os.path.join(os.path.dirname(_file_), "models", "meal_recommender_rf.pkl")
+encoders_path = os.path.join(os.path.dirname(_file_), "models", "label_encoders.pkl")
+meal_ideas_path = os.path.join(os.path.dirname(_file_), "models", "meal_ideas.json")
 
 model = joblib.load(model_path)
 encoders = joblib.load(encoders_path)
